@@ -1,2 +1,1 @@
-# ValksHangoutBot
-Bot for Valk's Hangout Discord Server https://discord.gg/thMupbv
+The bot was only mean't to be used on Valk's Hangout. https://discord.gg/thMupbv
