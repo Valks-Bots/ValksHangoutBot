@@ -47,8 +47,24 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	if (msg.author.bot) return // We don't want the bot reacting to itself..
-	if (msg.channel.type !== 'text') return // Lets focus on the use of text channels.
-  
+	if (msg.channel.type === 'text') 
+	{
+		partnerDivider(msg)
+	} 
+	else 
+	{
+		guild.channels.cache.get('660250862127677468').send({ embed: {
+			description: msg.content,
+			footer: {
+				text: `${msg.author.username}#${msg.author.discriminator} (${msg.author.id})`
+			},
+			timestamp: new Date()
+		}})
+	}
+})
+
+function partnerDivider(msg) 
+{
 	const channels = ['681297740546048000', '661055556890394654', '684094684980969575', '683537150352031800']
 	let filter = false
 	for (let i = 0; i < channels.length; i++) {
@@ -58,7 +74,7 @@ client.on('message', msg => {
 			break
 		}
 	}
-	
+
 	if (filter) 
 	{
 		msg.channel.send({embed: {
@@ -73,6 +89,6 @@ client.on('message', msg => {
 			timestamp: new Date()
 		}})
 	}
-})
+}
 
 client.login(process.env.APIKEY)
