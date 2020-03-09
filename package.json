@@ -1,0 +1,19 @@
+{
+  "name": "ValksHangoutBot",
+  "version": "1.0.0",
+  "description": "Bot for Valk's Hangout Discord Server",
+  "main": "bot.js",
+  "repository": "https://github.com/valkyrienyanko/ValksHangoutBot",
+  "author": "valkyrienyanko",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.0.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "dev:server": "nodemon -q ."
+  }
+}
