@@ -47,13 +47,26 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	if (msg.author.bot) return // We don't want the bot reacting to itself..
+	
+	if (msg.content.startsWith('!reply') && (msg.channel.id === '684256235696160771' || msg.channel.id === '660250862127677468')) 
+	{
+		const args = msg.content.split(' ')
+		const member = msg.guild.members.cache.get(args[1])
+		if (member == null)
+			msg.reply('invalid member')
+		else {
+			member.send(args.slice(2).join(' '))
+			msg.channel.send('Sent message to ' + member.displayName)
+		}
+	}
+	
 	if (msg.channel.type === 'text') 
 	{
 		partnerDivider(msg)
 	} 
 	else 
 	{
-		guild.channels.cache.get('660250862127677468').send({ embed: {
+		guild.channels.cache.get('660250862127677468').send(`<@&681042754196733995>`, { embed: {
 			description: msg.content,
 			footer: {
 				text: `${msg.author.username}#${msg.author.discriminator} (${msg.author.id})`
