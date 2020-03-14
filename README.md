@@ -15,3 +15,5 @@ The bot is only mean't to be used on Valk's Hangout. https://discord.gg/thMupbv
 - Only 1 person can send 1 message in #introductions
 - Count to X Anime Girls (automatically rename the channel to be a higher number if the users count over the limit)
 - Smash or Pass (If user says smash or pass and sends image at same time, react with smash or pass emotes)
+
+**Please contact valk#3277 if you'd like to contribute.**
